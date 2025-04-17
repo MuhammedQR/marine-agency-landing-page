@@ -133,7 +133,7 @@ const Navbar = () => {
                 src="/logo777.png"
                 alt="Triple Seven Logo"
                 sx={{
-                  height: { xs: 40, md: 60 }, // ✅ يتغير حسب حجم الشاشة
+                  height: { xs: 50, md: 60 }, // ✅ يتغير حسب حجم الشاشة
                   objectFit: "contain",
                   cursor: "pointer",
                 }}
