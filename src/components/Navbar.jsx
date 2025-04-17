@@ -121,11 +121,24 @@ const Navbar = () => {
                 <MenuIcon fontSize="large" />
               </IconButton>
             )}
-            <img
-              src="/logo777.png"
-              alt="Triple Seven Logo"
-              style={{ height: "60px", objectFit: "contain" }}
-            />
+            <Link
+              to="hero"
+              spy={true}
+              smooth={true}
+              duration={600}
+              offset={-80}
+            >
+              <Box
+                component="img"
+                src="/logo777.png"
+                alt="Triple Seven Logo"
+                sx={{
+                  height: { xs: 40, md: 60 }, // ✅ يتغير حسب حجم الشاشة
+                  objectFit: "contain",
+                  cursor: "pointer",
+                }}
+              />
+            </Link>
           </Toolbar>
         </Container>
       </AppBar>
@@ -172,8 +185,8 @@ const Navbar = () => {
                     fontWeight: "bold",
                     color: "#0ea5e9",
                     sx: {
-                        textAlign: "right", // ✅ هذا هو المفتاح
-                      },
+                      textAlign: "right", // ✅ هذا هو المفتاح
+                    },
                   }}
                 />
               </ListItem>
