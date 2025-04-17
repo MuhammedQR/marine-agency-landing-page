@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "react-scroll";
 import { styled } from "@mui/material/styles";
+import { Container } from "@mui/material";
 
 const links = [
   { label: "الرئيسية", to: "hero" },
@@ -67,67 +68,66 @@ const Navbar = () => {
           backdropFilter: elevate ? "blur(8px)" : "none",
         }}
       >
-        <Toolbar
-          sx={{ justifyContent: "space-between", px: { xs: 2, md: 14 } }}
-        >
-         
-          {!isMobile && (
-            <Box sx={{ display: "flex", gap: 3, alignItems: "center" }}>
-              {links.map((item, index) => (
+        <Container>
+          <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2 } }}>
+            {!isMobile && (
+              <Box sx={{ display: "flex", gap: 3, alignItems: "center" }}>
+                {links.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.to}
+                    spy={true}
+                    smooth={true}
+                    duration={600}
+                    offset={-80}
+                  >
+                    <Button
+                      sx={{
+                        color: "white",
+                        fontWeight: 500,
+                        "&:hover": { color: "#facc15" },
+                      }}
+                    >
+                      {item.label}
+                    </Button>
+                  </Link>
+                ))}
                 <Link
-                  key={index}
-                  to={item.to}
+                  to="contact"
                   spy={true}
                   smooth={true}
                   duration={600}
                   offset={-80}
                 >
                   <Button
+                    variant="contained"
                     sx={{
-                      color: "white",
-                      fontWeight: 500,
-                      "&:hover": { color: "#facc15" },
+                      backgroundColor: "#facc15",
+                      color: "#0f172a",
+                      fontWeight: "bold",
+                      "&:hover": {
+                        backgroundColor: "#fde047",
+                      },
                     }}
                   >
-                    {item.label}
+                    احجز الآن
                   </Button>
                 </Link>
-              ))}
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={600}
-                offset={-80}
-              >
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#facc15",
-                    color: "#0f172a",
-                    fontWeight: "bold",
-                    "&:hover": {
-                      backgroundColor: "#fde047",
-                    },
-                  }}
-                >
-                  احجز الآن
-                </Button>
-              </Link>
-            </Box>
-          )}
+              </Box>
+            )}
 
-          {isMobile && (
-            <IconButton color="inherit" onClick={handleDrawerToggle}>
-              <MenuIcon fontSize="large" />
-            </IconButton>
-          )}
-          <img
-            src="/logo777.png"
-            alt="Triple Seven Logo"
-            style={{ height: "60px", objectFit: "contain" }}
-          />
-        </Toolbar>
+            {isMobile && (
+              <IconButton color="inherit" onClick={handleDrawerToggle}>
+                <MenuIcon fontSize="large" />
+              </IconButton>
+            )}
+            <img
+              src="/logo777.png"
+              alt="Triple Seven Logo"
+              style={{ height: "60px", objectFit: "contain" }}
+            />
+          </Toolbar>
+        </Container>
       </AppBar>
 
       <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
@@ -146,7 +146,13 @@ const Navbar = () => {
                 <ListItem button>
                   <ListItemText
                     primary={item.label}
-                    primaryTypographyProps={{ fontWeight: 600 }}
+                    primaryTypographyProps={{
+                      fontWeight: 600,
+                      sx: {
+                        textAlign: "right", // ✅ هذا هو المفتاح
+                        width: "100%", // مهم لضمان أن المحاذاة تشمل كل النص
+                      },
+                    }}
                   />
                 </ListItem>
               </Link>
@@ -165,6 +171,9 @@ const Navbar = () => {
                   primaryTypographyProps={{
                     fontWeight: "bold",
                     color: "#0ea5e9",
+                    sx: {
+                        textAlign: "right", // ✅ هذا هو المفتاح
+                      },
                   }}
                 />
               </ListItem>
