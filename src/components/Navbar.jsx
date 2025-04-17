@@ -69,7 +69,7 @@ const Navbar = () => {
         }}
       >
         <Container>
-          <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2 } }}>
+          <Toolbar sx={{ justifyContent: "space-between", p: { xs: 2 } }}>
             {!isMobile && (
               <Box sx={{ display: "flex", gap: 3, alignItems: "center" }}>
                 {links.map((item, index) => (
