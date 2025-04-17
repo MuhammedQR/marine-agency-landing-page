@@ -3,6 +3,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
 //   direction: "rtl",
+  
   typography: {
     fontFamily: "'Tajawal', sans-serif",
   },
@@ -12,6 +13,7 @@ const theme = createTheme({
     },
     background: {
       default: "#f9fafb",
+      
     },
   },
 });

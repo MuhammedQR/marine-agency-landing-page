@@ -20,7 +20,8 @@ function App() {
           flexDirection: "column",
         }}
       >
-        <Container maxWidth="lg" sx={{ flexGrow: 1 }}>
+       <Container maxWidth="lg" sx={{ px: { xs: 0 } }}>
+
           <Navbar />
           <HeroSection />
           <FeaturesSection />
