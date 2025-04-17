@@ -4,23 +4,23 @@ import { Box, Typography, Grid } from "@mui/material";
 const logos = [
   {
     name: "AD Ports",
-    src: "/public/Picture4-removebg-preview.png",
+    src: "/Picture4-removebg-preview.png",
   },
   {
     name: "DP World",
-    src: "/public/Picture5-removebg-preview.png",
+    src: "/Picture5-removebg-preview.png",
   },
   {
     name: "Maersk",
-    src: "/public/Picture6-removebg-preview.png",
+    src: "/Picture6-removebg-preview.png",
   },
   {
     name: "MSC",
-    src: "/public/Picture7-removebg-preview.png",
+    src: "/Picture7-removebg-preview.png",
   },
   {
     name: "COSCO",
-    src: "/public/Picture4-removebg-preview.png",
+    src: "/Picture4-removebg-preview.png",
   },
 ];
 
