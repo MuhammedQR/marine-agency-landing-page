@@ -18,10 +18,10 @@ const logos = [
     name: "MSC",
     src: "/Picture7-removebg-preview.png",
   },
-  {
-    name: "COSCO",
-    src: "/Picture4-removebg-preview.png",
-  },
+  // {
+  //   name: "COSCO",
+  //   src: "/Picture4-removebg-preview.png",
+  // },
 ];
 
 const TrustedBy = () => {
