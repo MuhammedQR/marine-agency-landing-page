@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Grid, Typography, Card, CardContent } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  Container,
+} from "@mui/material";
 import { motion } from "framer-motion";
 import { FaShip, FaRegClock, FaHandshake } from "react-icons/fa";
 
@@ -23,7 +30,8 @@ const services = [
 
 const FeaturesSection = () => {
   return (
-    <Box id="features" sx={{ py: 10, px: 3, backgroundColor: "#f9fafb" }}>
+    <Box id="features" sx={{ py: 10, px: 3 }}>
+      {/* <Container maxWidth="lg"> */}
       <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
         خدماتنا المتميزة
       </Typography>
@@ -39,6 +47,8 @@ const FeaturesSection = () => {
               <Card
                 sx={{
                   height: "100%",
+                  maxWidth: "400px",
+
                   textAlign: "center",
                   p: 4,
                   borderRadius: 4,
@@ -53,7 +63,9 @@ const FeaturesSection = () => {
                   <Typography variant="h6" fontWeight="bold" gutterBottom>
                     {service.title}
                   </Typography>
-                  <Typography color="text.secondary">{service.description}</Typography>
+                  <Typography color="text.secondary">
+                    {service.description}
+                  </Typography>
                 </CardContent>
               </Card>
             </motion.div>

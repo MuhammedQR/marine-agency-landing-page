@@ -26,7 +26,7 @@ const logos = [
 
 const TrustedBy = () => {
   return (
-    <Box id="trusted" sx={{ py: 10, backgroundColor: "#f3f4f6", px: 3 }}>
+    <Box id="trusted" sx={{ py: 10, px: 3 }}>
       <Typography variant="h6" color="text.secondary" align="center">
         شركات نعتز بثقتها
       </Typography>
@@ -42,7 +42,7 @@ const TrustedBy = () => {
               alt={logo.name}
               style={{
                 maxWidth: "100%",
-                height: "50px",
+                height: "80px",
                 objectFit: "contain",
                 filter: "grayscale(1)",
                 opacity: 0.8,

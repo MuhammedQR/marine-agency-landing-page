@@ -14,13 +14,13 @@ function App() {
       <CssBaseline />
       <Box
         sx={{
-          bgcolor: "#f5f5f5",
+          bgcolor: "#fff",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
         }}
       >
-       <Container maxWidth="lg" sx={{ px: { xs: 0 } }}>
+       {/* <Container maxWidth="lg" sx={{ px: { xs: 0 } }}> */}
 
           <Navbar />
           <HeroSection />
@@ -28,7 +28,7 @@ function App() {
           <TrustedBy />
           <WhyUsSection />
           <ContactSection />
-        </Container>
+        {/* </Container> */}
         <Footer />
       </Box>
     </>

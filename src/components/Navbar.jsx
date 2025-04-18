@@ -68,7 +68,9 @@ const Navbar = () => {
           backdropFilter: elevate ? "blur(8px)" : "none",
         }}
       >
-        <Container>
+        <Container 
+        maxWidth="lg"
+        >
           <Toolbar sx={{ justifyContent: "space-between", p: { xs: 2 } }}>
             {!isMobile && (
               <Box sx={{ display: "flex", gap: 3, alignItems: "center" }}>
